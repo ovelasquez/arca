@@ -1,0 +1,58 @@
+<?php
+function revslider_init() {
+    menu_rebuild();
+}
+function revslider_menu()
+{
+    $items = array();
+
+    $items['admin/revslider'] = array(
+        'title' => 'Revolution Sliders',
+//        'description' => '',
+        'page callback' => 'revslider_admin_handle',
+    //   'page arguments' => array('devel_admin_settings'),
+        'file' => 'revslider_route.inc',
+        'access arguments' => array('administer site configuration'),
+    );
+    $items['admin/revslider/ajax'] = array(
+        'title' => 'Revolution Sliders Ajax',
+        'page callback' => 'revslider_ajax_handle',
+        'description' => 'Revolution Sliders ajax handle file',
+        'file'=>'revslider_route.inc',
+        'access arguments' => array('administer site configuration'),
+        'type'=>MENU_LOCAL_ACTION
+    );
+    return $items;
+}
+
+function revslider_admin_handle()
+{
+    return RevSliderRoute::instances()->admin();
+}
+
+function revslider_ajax_handle()
+{
+    return RevSliderRoute::instances()->ajax();
+}
+
+
+function revslider_block_info() {
+    $blocks = array();
+    if (!class_exists('RevSliderRoute'))
+        require_once dirname(__FILE__).'/revslider_route.inc';
+    $sliders = RevSliderRoute::instances()->slider_list();
+    if (!empty($sliders)) {
+        foreach ($sliders as $slider) {
+            if(empty($slider['alias']))
+                continue;
+            $blocks[$slider['alias']]['info'] = t('Slider Revolution : '.$slider['title']);
+            $blocks[$slider['alias']]['cache'] = DRUPAL_NO_CACHE;
+        }
+    }
+    return $blocks;
+}
+function revslider_block_view($delta = '') {
+    if (!class_exists('RevSliderRoute'))
+        require_once dirname(__FILE__).'/revslider_route.inc';
+    return RevSliderRoute::instances()->block_slider($delta);
+}

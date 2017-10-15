@@ -1,0 +1,86 @@
+# In mythemename.libraries.yml
+
+# Give your library a name.
+admin-editor:
+  version: "1.0.0"
+  css:
+      theme:
+          #public
+          assets/public/js/thickbox/thickbox.css: {}
+          assets/admin/css/edit_layers.css: {}
+          assets/public/css/settings.css: {}
+          assets/public/css/tp-color-picker.css: {}
+          assets/public/fonts/font-awesome/css/font-awesome.css: {}
+          assets/public/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css: {}
+          #admin
+          assets/admin/css/admin.css: {}
+          assets/admin/css/global.css: {}
+          assets/admin/css/tipsy.css: {}
+          assets/admin/js/codemirror/codemirror.css: {}
+          assets/admin/css/dp_admin.css: {}
+  js:
+      #lib
+      assets/admin/js/drupal/revslider_for_dp.js: {}
+      assets/admin/js/drupal/revslider_media.js: {}
+      assets/admin/js/wp/wp-util.js: {}
+      assets/admin/js/wp/iris.min.js: {}
+      assets/admin/js/wp/color-picker.js: {}
+      assets/public/js/jquery.themepunch.tools.min.js: {}
+      assets/public/js/tp-color-picker.min.js: {}
+      assets/public/js/thickbox/thickbox.js: {}
+      #other
+      assets/admin/js/settings.js: {}
+      assets/admin/js/admin.js: {}
+      assets/admin/js/context_menu.js: {}
+      assets/admin/js/css_editor.js: {}
+      assets/admin/js/edit_layers_timeline.js: {}
+      assets/admin/js/edit_layers.js: {}
+      assets/admin/js/rev_admin.js: {}
+      assets/admin/js/jquery.tipsy.js: {}
+      assets/admin/js/codemirror/codemirror.js: {}
+      assets/admin/js/codemirror/util/match-highlighter.js: {}
+      assets/admin/js/codemirror/util/searchcursor.js: {}
+      assets/admin/js/codemirror/css.js: {}
+      assets/admin/js/codemirror/xml.js: {}
+
+
+  dependencies:
+            - core/jquery
+            - core/drupal
+            - core/jquery.ui.core
+            - core/jquery.ui.mouse
+            - core/jquery.ui.accordion
+            - core/jquery.ui.datepicker
+            - core/jquery.ui.dialog
+            - core/jquery.ui.slider
+            - core/jquery.ui.autocomplete
+            - core/jquery.ui.sortable
+            - core/jquery.ui.droppable
+            - core/jquery.ui.widget
+
+front-view:
+  version: "1.0.0"
+  css:
+      theme:
+          #public
+          assets/public/css/settings.css: {}
+          assets/public/css/drupal.css: {}
+          assets/public/fonts/font-awesome/css/font-awesome.css: {}
+          assets/public/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css: {}
+  js:
+      assets/public/js/jquery.themepunch.tools.min.js: {}
+      assets/public/js/jquery.themepunch.revolution.min.js: {}
+      #extend :
+#      assets/public/js/extensions/revolution.extension.actions.min.js: {}
+#      assets/public/js/extensions/revolution.extension.carousel.min.js: {}
+#      assets/public/js/extensions/revolution.extension.kenburn.min.js: {}
+#      assets/public/js/extensions/revolution.extension.layeranimation.min.js: {}
+#      assets/public/js/extensions/revolution.extension.migration.min.js: {}
+#      assets/public/js/extensions/revolution.extension.navigation.min.js: {}
+#      assets/public/js/extensions/revolution.extension.parallax.min.js: {}
+#      assets/public/js/extensions/revolution.extension.slideanims.min.js: {}
+#      assets/public/js/extensions/revolution.extension.video.min.js: {}
+
+  dependencies:
+            - core/jquery
+            - core/drupal

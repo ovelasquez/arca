@@ -1,0 +1,15 @@
+<?php
+/**
+ * Created by FsFlex.
+ * User: VH
+ * Date: 7/13/2017
+ * Time: 11:01 AM
+ */
+
+class RevSliderWpml
+{
+    public static function isWpmlExists()
+    {
+        return false;
+    }
+}
