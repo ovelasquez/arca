@@ -13,7 +13,11 @@
 	<?php print $head; ?>
 	<title><?php print $head_title; ?></title>
 	<?php print $styles; ?>
-	
+	<script type="text/javascript">
+		function myMap(){
+			
+		}
+	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo06UVfAryjV6Ve85b8umpAnii-ZJzDyk&callback=myMap"></script>
 	<?php print $scripts; ?>
 	<?php 
