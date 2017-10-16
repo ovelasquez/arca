@@ -295,6 +295,7 @@
 
 	<!-- Google Map -->
 	<script type="text/javascript">
+		if (document.getElementById('map') !== null) {
 		var locations = [
 		['<div class="infobox"><h3 class="title"><a href="#"><?php echo theme_get_setting('contactmap_title'); ?></a></h3><span><?php echo theme_get_setting('contactmap_address'); ?></span><br><?php //echo theme_get_setting('contactmap_phone'); ?></p></div></div></div>', <?php echo theme_get_setting('contactmap_lat'); ?>, <?php echo theme_get_setting('contactmap_long'); ?>, 2],
 		['<div class="infobox"><h3 class="title"><a href="#">ARCA INTERNATIONAL GROUP, COLOMBIA</a></h3><span>Carrera 12 N° 84 -12, Edificio Av. Torre 82, Oficina 704 Bogotá</span><br><?php //echo theme_get_setting('contactmap_phone'); ?></p></div></div></div>', 4.667799,-74.052697, 2],
@@ -338,6 +339,7 @@
 			  infowindow.open(map, marker);
 			}
 		  })(marker, i));
+		}
 		}
 	</script>
 	
